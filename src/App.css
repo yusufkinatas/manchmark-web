@@ -1,38 +1,125 @@
+:root {
+  --clr-primary: #1db954;
+  --clr-bg: #121212;
+  --clr-grey: #dfe4ea;
+}
+
 .App {
   text-align: center;
+  background-color: var(--clr-bg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+
+  color: var(--clr-grey);
+  text-align: center;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  
+}
+
+
+.App-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+  
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin-top: 5vmin;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  font-size: 2em;
+  font-weight: 600;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.subtitle {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+p {
+  max-width: 700px;
+}
+
+.download-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-end;
+  flex: 1;
+  margin-bottom: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.download-buttons > :last-child {
+  margin-left: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.download-button {
+  width: 40vmin;
+  max-width: 250px;
+  height: auto;
+}
+
+.rodal-dialog {
+  background: #212121;
+  height: 100%;
+  /* display: flex; */
+}
+
+.rodal-dialog .links {
+  display: flex;
+  flex:1;
+}
+
+.rodal-dialog .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: .5em 0;
+  cursor: pointer;
+}
+
+.rodal-dialog .modal-title {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin:0 0 1em;
+  font-size: 1.3em;
+  letter-spacing: .1em;
+}
+
+.rodal-dialog a {
+  color: var(--clr-primary);
+  font-size: 1.2em;
+  width: 80%;
+}
+
+.rodal-dialog img {
+  width: 80%;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid var(--clr-primary);
+}
+
+
+.developers-btn {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: .6em .6em;
+  background: var(--clr-primary);
+  color: #fff;
+  font-size: .8em;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0 0 1em 0;
+
 }
