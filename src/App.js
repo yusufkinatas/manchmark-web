@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from './assets/logo.png';
+import logo from './assets/logo.jpg';
 import appStore from './assets/app-store.png';
 import googlePlay from './assets/google-play.png';
 import yusufPhoto from './assets/yusuf.jpeg';
